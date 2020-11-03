@@ -24,6 +24,8 @@ ggplot(data = data, aes(x=region, y=observations))+
   geom_jitter()+
   theme_classic()
 
-#Tell slightly different stories because it is easier to see the range/skew
+#Tell different stories because it is easier to see the range/skew
 #of the data in the scatterplot. It is easier to see where data clusters 
-#around the mean in the scatterplot. 
+#around the mean in the scatterplot. The bar plot simply shows that the 
+#means for each population are similar; the error bars do not give a
+#good sense of how the data looks
