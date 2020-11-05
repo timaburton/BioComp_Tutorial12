@@ -14,4 +14,13 @@ ggplot(dat, aes(x=Incident.Angle, y=Refracted.Angle)) +
   theme_classic()
 
 #------------------------------------------------------------------
+#load the data from data.txt
+dat2 <- read.csv("data.txt", header = TRUE, stringsAsFactors = FALSE)
 
+# plot a bar chart on the average observations for each region
+ggplot(dat2, aes(x=region, y=observations))+
+  geom_bar(stat = "summary", fun = "mean") +
+  coord_cartesian(ylim=c(15,15.3)) +
+  ylab("average observations")
+
+# make a scatter plot of the observations in data.txt
